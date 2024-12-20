@@ -9,7 +9,7 @@ Relationship ParentClass As %ZPM.PackageManager.Developer.Annotation.CosEntity.C
 
 /// name of owner class; used during construction because the class member may not have had its ParentClass 
 /// relationship populated yet (or it may not end up being saved anyway). Not projected to XML. 
-Property ParentClassName As %Dictionary.Classname(XMLPROJECTION = "none");
+Property ParentClassName As %String(XMLPROJECTION = "none");
 
 Index ParentClassIndex On ParentClass;
 
@@ -40,7 +40,7 @@ Method HandleExtraProperties()
 	// no-op - handle fields specific to the type of class member
 }
 
-ClassMethod SkipProxy(pParentClassName As %Dictionary.Classname, pMemberName As %String) As %Boolean
+ClassMethod SkipProxy(pParentClassName As %String, pMemberName As %String) As %Boolean
 {
 	quit 0
 }
@@ -155,7 +155,7 @@ ClassMethod BuildProxies(pParentClassProxy As ClassProxy)
 	}
 }
 
-Method GetSortedSuperclassList(pClassName As %Dictionary.Classname) As %String
+Method GetSortedSuperclassList(pClassName As %String) As %String
 {
 	set tImmediateSuperclasses = $$$comClassKeyGet(pClassName, $$$cCLASSsuper)
 	set tInheritanceDirection = $$$defClassKeyGet(pClassName, $$$cCLASSinheritance)
@@ -422,7 +422,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>ClassMemberProxyDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

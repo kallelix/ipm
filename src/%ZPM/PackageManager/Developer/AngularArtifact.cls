@@ -57,7 +57,7 @@ Storage Default
 <IdLocation>^%ZPM.AngularArtifactD</IdLocation>
 <IndexLocation>^%ZPM.AngularArtifactI</IndexLocation>
 <StreamLocation>^%ZPM.AngularArtifactS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

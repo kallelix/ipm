@@ -17,7 +17,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>ReturnValueDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

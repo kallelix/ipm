@@ -3,7 +3,7 @@ Class %ZPM.PackageManager.Core.CompiledXSLTCache Extends %ZPM.PackageManager.Cor
 
 Property Cache [ MultiDimensional, Private ];
 
-ClassMethod GetCompiledStyleSheet(pClassName As %Dictionary.Classname, pXDataName As %Dictionary.Identifier, Output pCompiledStylesheet As %XML.XSLT.CompiledStyleSheet = {$$$NULLOREF}) As %Status
+ClassMethod GetCompiledStyleSheet(pClassName As %String, pXDataName As %ZPM.Types.Identifier, Output pCompiledStylesheet As %XML.XSLT.CompiledStyleSheet = {$$$NULLOREF}) As %Status
 {
 	Set tSC = $$$OK
 	Try {

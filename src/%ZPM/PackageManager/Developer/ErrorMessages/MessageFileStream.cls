@@ -62,7 +62,7 @@ Storage Default
 <IdLocation>^ZPM.Dev.MsgFileD</IdLocation>
 <IndexLocation>^ZPM.Dev.MsgFileI</IndexLocation>
 <StreamLocation>^ZPM.Dev.MsgFileS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

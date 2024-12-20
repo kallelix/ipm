@@ -31,10 +31,10 @@ Parameter XMLTYPE = "ZPMCSPApplication";
 Property Enabled As %Boolean [ InitialExpression = 1 ];
 
 /// DeepSee Enabled
-Property DeepSeeEnabled As %Installer.Boolean [ InitialExpression = 0 ];
+Property DeepSeeEnabled As %Boolean [ InitialExpression = 0 ];
 
 /// iKnow Enabled
-Property iKnowEnabled As %Installer.Boolean [ InitialExpression = 0 ];
+Property iKnowEnabled As %Boolean [ InitialExpression = 0 ];
 
 /// Password authentication enabled
 Property PasswordAuthEnabled As %Boolean [ InitialExpression = 0 ];
@@ -442,3 +442,4 @@ Method OnGetStudioProject(pProject As %Studio.Project, Output pHandled As %Boole
 }
 
 }
+

@@ -45,12 +45,12 @@ Relationship Mappings As %ZPM.PackageManager.Developer.MappingReference(XMLITEMN
 Relationship Invokes As %ZPM.PackageManager.Developer.InvokeReference(XMLITEMNAME = "Invoke", XMLPROJECTION = "WRAPPED", XMLREFERENCE = "COMPLETE") [ Cardinality = children, Inverse = Module ];
 
 /// Lifecycle class used by default for this module
-Property LifecycleClass As %Dictionary.Classname;
+Property LifecycleClass As %String;
 
 /// Lifecycle class to use for a specific command (may be overridden from command line)
-Property OverrideLifecycleClass As %Dictionary.Classname [ Transient ];
+Property OverrideLifecycleClass As %String [ Transient ];
 
-Property InstallerClass As %Dictionary.Classname;
+Property InstallerClass As %String;
 
 Property Lifecycle As %ZPM.PackageManager.Developer.Lifecycle.Abstract(XMLPROJECTION = "NONE") [ Transient ];
 
@@ -76,7 +76,7 @@ Property AfterInstallMessage As %String(MAXLEN = "", XMLPROJECTION = "Element");
 
 Property Deployed As %Boolean(XMLPROJECTION = "Element");
 
-Method NameSet(val As %RawString) As %Status
+Method NameSet(val As %ZPM.Types.RawString) As %Status
 {
 	Set i%Name = $$$lcase(val)
 	Return $$$OK
@@ -1000,7 +1000,7 @@ Method LifecycleGet() As %ZPM.PackageManager.Developer.Lifecycle.Abstract
 	Quit r%Lifecycle
 }
 
-Method OverrideLifecycleClassSet(pValue As %Dictionary.Classname) As %Status
+Method OverrideLifecycleClassSet(pValue As %String) As %Status
 {
 	If (..OverrideLifecycleClass '= pValue) && $IsObject(..Lifecycle) {
 		Set ..Lifecycle = ""
@@ -1545,7 +1545,7 @@ Storage Default
 <IdLocation>^ZPM.Dev.ModuleD</IdLocation>
 <IndexLocation>^ZPM.Dev.ModuleI</IndexLocation>
 <StreamLocation>^ZPM.Dev.ModuleS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

@@ -222,7 +222,7 @@ Storage Default
 </Data>
 <State>RangeState</State>
 <StreamLocation>^ZPM.PackageManager.Core.SemVer.RangeS</StreamLocation>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }

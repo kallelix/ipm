@@ -86,7 +86,7 @@ ClassMethod ConstructMissingMandatoryTag() As AnchorTag
 }
 
 /// private helper method; throws exceptions. 
-Method ProcessModifiers(ByRef pCommentBlock As %Library.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
+Method ProcessModifiers(ByRef pCommentBlock As %ZPM.Types.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
 {
 	set tFailsafe = 0
 	set tAcceptableModifierList = $listfromstring($zconvert(..#UniversalModifiers,"U"))	
@@ -146,7 +146,7 @@ ClassMethod ShortTagName() As %String
 /// expects the comment block to begin with the "remainder" after the initial tag has been 
 /// removed, with the line break and anything preceding it still present. Leaves the 
 /// block in a state with that remainder gone, and beginning with the next real line. 
-Method HandleExtraContent(ByRef pCommentBlock As %Library.RawString = "", pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
+Method HandleExtraContent(ByRef pCommentBlock As %ZPM.Types.RawString = "", pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
 {
 	if $length(pCommentBlock) = 0 {
 		// nothing left ... valid case of no modifiers or other stuff
@@ -164,7 +164,7 @@ Method HandleExtraContent(ByRef pCommentBlock As %Library.RawString = "", pConte
 	set pCommentBlock = $zstrip(pCommentBlock, "<W") // whitespace
 }
 
-Method InitializeFromCommentText(ByRef pCommentBlock As %Library.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) As %Status
+Method InitializeFromCommentText(ByRef pCommentBlock As %ZPM.Types.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) As %Status
 {
 	set tReturnValue = $$$OK
 	try {
@@ -236,7 +236,7 @@ Storage Default
 <IdLocation>^%ZPM.Dev.Annotation.AnchorTagD</IdLocation>
 <IndexLocation>^%ZPM.Dev.Annotation.AnchorTagI</IndexLocation>
 <StreamLocation>^%ZPM.Dev.Annotation.AnchorTagS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

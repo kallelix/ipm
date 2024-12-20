@@ -106,7 +106,7 @@ Storage Default
 <IdLocation>^ZPM.Server.ModuleD</IdLocation>
 <IndexLocation>^ZPM.Server.ModuleI</IndexLocation>
 <StreamLocation>^ZPM.Server.ModuleS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

@@ -12,7 +12,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>QueryDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

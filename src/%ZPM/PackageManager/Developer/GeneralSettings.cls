@@ -29,12 +29,12 @@ Storage Default
 <Value>SuppressCompilation</Value>
 </Value>
 </Data>
-<DataLocation>^SYS</DataLocation>
+<DataLocation>^%ZPM.Packa360D.GeneralSettF1AAD</DataLocation>
 <DefaultData>GeneralSettingsDefaultData</DefaultData>
-<IdLocation>^SYS</IdLocation>
-<IndexLocation>^%ZPM.GeneralSettingsI</IndexLocation>
-<StreamLocation>^%ZPM.GeneralSettingsS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<IdLocation>^%ZPM.Packa360D.GeneralSettF1AAD</IdLocation>
+<IndexLocation>^%ZPM.Packa360D.GeneralSettF1AAI</IndexLocation>
+<StreamLocation>^%ZPM.Packa360D.GeneralSettF1AAS</StreamLocation>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

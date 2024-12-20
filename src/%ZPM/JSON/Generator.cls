@@ -1,4 +1,4 @@
-Class %ZPM.JSON.Generator Extends %JSON.Generator [ System = 2 ]
+Class %ZPM.JSON.Generator Extends %ZPM.Types.JSON.Generator [ System = 2 ]
 {
 
 /// Generate code for getting the field value from a binary stream and storing in variable named data.

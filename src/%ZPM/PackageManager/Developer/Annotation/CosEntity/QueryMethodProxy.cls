@@ -13,7 +13,7 @@ Parameter ParsedSpecKey = {$$$cMETHformalspecparsed};
 Parameter CommonTags;
 
 /// filter for implementation methods for custom queries (that is, queries of %Query type)
-ClassMethod SkipProxy(pParentClassName As %Dictionary.Classname, pMemberName As %String) As %Boolean
+ClassMethod SkipProxy(pParentClassName As %String, pMemberName As %String) As %Boolean
 {
 	// query methods store the query name under the "stub member" subscript
 	if $$$comMemberKeyGet(pParentClassName, ..#DictionaryKey, pMemberName, $$$cMETHstubmember) = "" {
@@ -24,7 +24,7 @@ ClassMethod SkipProxy(pParentClassName As %Dictionary.Classname, pMemberName As 
 
 Storage Default
 {
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

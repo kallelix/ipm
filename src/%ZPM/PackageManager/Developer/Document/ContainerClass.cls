@@ -28,7 +28,7 @@ ClassMethod Unpack() As %Status
 	Quit tSC
 }
 
-ClassMethod Create(pTargetClassName As %Dictionary.Classname, ByRef pItems, pVerbose As %Boolean = 0) As %Status
+ClassMethod Create(pTargetClassName As %String, ByRef pItems, pVerbose As %Boolean = 0) As %Status
 {
 	Set tSC = $$$OK
 	Try {

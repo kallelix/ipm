@@ -5,9 +5,9 @@ Index Run On Run [ Type = bitmap ];
 
 Relationship Run As %ZPM.PackageManager.Developer.DependencyAnalyzer.ModuleResults [ Cardinality = one, Inverse = Problems ];
 
-Property ProblemClass As %Dictionary.Classname [ Required ];
+Property ProblemClass As %String [ Required ];
 
-Property ProblemMember As %Dictionary.Identifier [ Required ];
+Property ProblemMember As %ZPM.Types.Identifier [ Required ];
 
 Property ProblemLine As %Integer(MINVAL = 0) [ Required ];
 
@@ -15,7 +15,7 @@ Property ProblemCode As %String(MAXLEN = "") [ Required ];
 
 Property ReferencedModule As %String(MAXLEN = 255);
 
-Property ReferencedClass As %Dictionary.Classname [ Required ];
+Property ReferencedClass As %String [ Required ];
 
 Property ReferencedClassExists As %Boolean [ InitialExpression = 1 ];
 
@@ -61,7 +61,7 @@ Storage Default
 <IdLocation>^%ZPM.Dev.AnalyzerProblemD</IdLocation>
 <IndexLocation>^%ZPM.Dev.AnalyzerProblemI</IndexLocation>
 <StreamLocation>^%ZPM.Dev.AnalyzerProblemS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

@@ -71,7 +71,7 @@ Storage Default
 <IdLocation>^%ZPM.Packa360D.SystemRequi5D02D</IdLocation>
 <IndexLocation>^%ZPM.Packa360D.SystemRequi5D02I</IndexLocation>
 <StreamLocation>^%ZPM.Packa360D.SystemRequi5D02S</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

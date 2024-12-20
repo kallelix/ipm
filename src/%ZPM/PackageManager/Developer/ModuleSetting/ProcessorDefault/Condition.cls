@@ -28,7 +28,7 @@ Storage Default
 </Data>
 <State>ConditionState</State>
 <StreamLocation>^ZPM.Dev.ModuleSetting.ConditionS</StreamLocation>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }

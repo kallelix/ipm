@@ -106,7 +106,7 @@ Storage Default
 <IdLocation>^%ZPM.Server.ApplicationD</IdLocation>
 <IndexLocation>^%ZPM.Server.ApplicationI</IndexLocation>
 <StreamLocation>^%ZPM.Server.ApplicationS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

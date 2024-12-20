@@ -119,7 +119,7 @@ Storage Default
 </Data>
 <State>SemanticVersionExpressionState</State>
 <StreamLocation>^ZPM.PackageManager9CFF.SemanticVer1833S</StreamLocation>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }

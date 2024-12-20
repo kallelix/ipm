@@ -25,7 +25,7 @@ Storage Default
 </Value>
 </Data>
 <State>ParameterState</State>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }

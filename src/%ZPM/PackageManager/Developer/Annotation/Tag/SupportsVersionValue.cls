@@ -28,7 +28,7 @@ Method ValidateAndAssignVersion(pVersionValue As %String = "", pContextObject As
 	}
 }
 
-Method HandleVersionContent(ByRef pCommentBlock As %Library.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity, pTagName As %String) [ Private ]
+Method HandleVersionContent(ByRef pCommentBlock As %ZPM.Types.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity, pTagName As %String) [ Private ]
 {
 	set tLineContent = ##class(%ZPM.PackageManager.Developer.Annotation.Utils).PopCommentLine(.pCommentBlock)
 	set tLineContent = $zstrip(tLineContent, "*W")

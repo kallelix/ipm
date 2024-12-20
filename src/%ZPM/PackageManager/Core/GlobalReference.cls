@@ -5,7 +5,7 @@ Class %ZPM.PackageManager.Core.GlobalReference Extends %String [ ClassType = dat
 /// <a href="https://docs.intersystems.com/latest/csp/docbook/DocBook.UI.Page.cls?KEY=GGBL_structure#GGBL_structure_maxsubscrlen">Maximum Length of a Global Reference</a>
 Parameter MAXLEN = 511;
 
-ClassMethod IsValid(%val As %Library.RawString) As %Status [ ServerOnly = 0 ]
+ClassMethod IsValid(%val As %ZPM.Types.RawString) As %Status [ ServerOnly = 0 ]
 {
 	Set tOldZReference = $ZReference
 	Set tSC = $$$OK

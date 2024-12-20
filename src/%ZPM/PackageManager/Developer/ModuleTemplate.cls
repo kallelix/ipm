@@ -585,7 +585,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>ModuleTemplateDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

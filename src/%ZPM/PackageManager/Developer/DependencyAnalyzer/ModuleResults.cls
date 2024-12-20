@@ -73,7 +73,7 @@ Storage Default
 <IdLocation>^%ZPM.Dev.AnalyzerModuleD</IdLocation>
 <IndexLocation>^%ZPM.Dev.AnalyzerModuleI</IndexLocation>
 <StreamLocation>^%ZPM.Dev.AnalyzerModuleS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

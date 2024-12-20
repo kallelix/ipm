@@ -14,7 +14,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>ExtensibleDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

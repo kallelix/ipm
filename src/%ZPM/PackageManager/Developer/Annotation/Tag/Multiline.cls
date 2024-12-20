@@ -5,7 +5,7 @@ Class %ZPM.PackageManager.Developer.Annotation.Tag.Multiline Extends %ZPM.Packag
 /// name of class property where the multiline content should be placed
 Parameter MultiLineProperty;
 
-Method HandleExtraContent(ByRef pCommentBlock As %Library.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
+Method HandleExtraContent(ByRef pCommentBlock As %ZPM.Types.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
 {
 	// in practice, the multi-line content might always/only be description/documentation-related. If that's the case, 
 	// we should simplify by removing the MultiLineProperty parameter, and declaring the Documentation property 
@@ -30,7 +30,7 @@ Method HandleExtraContent(ByRef pCommentBlock As %Library.RawString, pContextObj
 
 Storage Default
 {
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

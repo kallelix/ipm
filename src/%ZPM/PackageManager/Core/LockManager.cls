@@ -57,7 +57,7 @@ Method Unlock(pGlobalName As %String, pFlags As %String = "", pImmediate As %Boo
 	}
 }
 
-Method LockClassId(pClassName As %Dictionary.Classname, pID As %String, pShared As %Boolean = 0, pTimeout As %Integer) As %Status
+Method LockClassId(pClassName As %String, pID As %String, pShared As %Boolean = 0, pTimeout As %Integer) As %Status
 {
 	Set tSC = $classmethod(pClassName,"%LockId",pID,pShared,.pTimeout)
 	If $$$ISOK(tSC) {
@@ -67,7 +67,7 @@ Method LockClassId(pClassName As %Dictionary.Classname, pID As %String, pShared 
 	Quit tSC
 }
 
-Method UnlockClassId(pClassName As %Dictionary.Classname, pID As %String, pShared As %Boolean = 0, pImmediate As %Boolean = 0)
+Method UnlockClassId(pClassName As %String, pID As %String, pShared As %Boolean = 0, pImmediate As %Boolean = 0)
 {
 	Set tOID = $$$oidCompose(pID,pClassName)
 	If $Data(i%OIDCache(tOID,pShared),tLockCount) {

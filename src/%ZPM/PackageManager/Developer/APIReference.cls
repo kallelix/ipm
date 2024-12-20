@@ -15,7 +15,7 @@ Storage Default
 </Data>
 <State>APIReferenceState</State>
 <StreamLocation>^%ZPM.Dev.APIReferenceS</StreamLocation>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }

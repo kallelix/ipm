@@ -25,7 +25,7 @@ Method VersionStringSet(tValue) As %Status
 	Quit tSC
 }
 
-Method NameSet(val As %RawString) As %Status
+Method NameSet(val As %ZPM.Types.RawString) As %Status
 {
 	set i%Name = $$$lcase(val)
 	QUIT $$$OK
@@ -49,7 +49,7 @@ Storage Default
 </Data>
 <State>ModuleReferenceState</State>
 <StreamLocation>^%ZPM.PackageManager9CFF.ModuleReferB471S</StreamLocation>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }

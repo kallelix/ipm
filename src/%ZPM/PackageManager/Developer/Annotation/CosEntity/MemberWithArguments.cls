@@ -136,7 +136,7 @@ Method SupplyMissingTags()
 
 Storage Default
 {
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

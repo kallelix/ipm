@@ -7,7 +7,7 @@ Class %ZPM.PackageManager.Developer.Annotation.Utils
 /// text from a string, extract it, and trim down the remainder. But instead of matching a single space 
 /// it uses <class>%Regex.Matcher</class> to match 1-or-more whitespace characters. If no whitespace 
 /// is found, it just returns the original string and sets the original string to empty. 
-ClassMethod PopWhitespacePiece(ByRef pWorkingString As %Library.RawString) As %String
+ClassMethod PopWhitespacePiece(ByRef pWorkingString As %ZPM.Types.RawString) As %String
 {
 	set tMatcher = ##class(%Regex.Matcher).%New("\s+") // whitespace
 	set tMatcher.Text = pWorkingString
@@ -25,7 +25,7 @@ ClassMethod PopWhitespacePiece(ByRef pWorkingString As %Library.RawString) As %S
 }
 
 /// utility to pop the first line from a <class>%Library.RawString</class>
-ClassMethod PopCommentLine(ByRef tWorkingCommentBlock As %Library.RawString) As %String
+ClassMethod PopCommentLine(ByRef tWorkingCommentBlock As %ZPM.Types.RawString) As %String
 {
 	set tLineBreak = $char(13,10)	
 	set tFirstLine = $piece(tWorkingCommentBlock,tLineBreak,1)

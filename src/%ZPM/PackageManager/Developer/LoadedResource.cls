@@ -155,7 +155,7 @@ Storage Default
 <IdLocation>^CacheTemp.ZPM.LoadedResourceD</IdLocation>
 <IndexLocation>^CacheTemp.ZPM.LoadedResourceI</IndexLocation>
 <StreamLocation>^CacheTemp.ZPM.LoadedResourceS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

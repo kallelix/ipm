@@ -34,7 +34,7 @@ Storage Default
 <IdLocation>^ZPM.Dev.ModuleC("Mappings")</IdLocation>
 <IndexLocation>^ZPM.Dev.MappingI</IndexLocation>
 <StreamLocation>^ZPM.Dev.MappingS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

@@ -4,7 +4,7 @@ Class %ZPM.PackageManager.Developer.Annotation.Tag.API.Deprecated Extends (%ZPM.
 
 Parameter XMLNAME = "API_Deprecated";
 
-Method HandleExtraContent(ByRef pCommentBlock As %Library.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
+Method HandleExtraContent(ByRef pCommentBlock As %ZPM.Types.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
 {
 	do ..HandleVersionContent(.pCommentBlock, pContextObject, ..ShortTagName())
 }
@@ -18,7 +18,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>DeprecatedDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

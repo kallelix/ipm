@@ -26,7 +26,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>ParameterProxyDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

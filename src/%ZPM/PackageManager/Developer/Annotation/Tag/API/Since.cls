@@ -4,7 +4,7 @@ Class %ZPM.PackageManager.Developer.Annotation.Tag.API.Since Extends (%ZPM.Packa
 
 Parameter XMLNAME = "API_Since";
 
-Method HandleExtraContent(ByRef pCommentBlock As %Library.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
+Method HandleExtraContent(ByRef pCommentBlock As %ZPM.Types.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
 {
 	do ..HandleVersionContent(.pCommentBlock, pContextObject, ..ShortTagName())
 }
@@ -18,7 +18,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>SinceDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

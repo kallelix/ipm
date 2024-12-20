@@ -38,7 +38,7 @@ Storage Default
 </Data>
 <State>ModuleAuthorInfoState</State>
 <StreamLocation>^ZPM.PackageManager.ModuleAutho4EB8S</StreamLocation>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }

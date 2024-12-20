@@ -14,7 +14,7 @@ Property Documentation As %String(MAXLEN = 2000, XMLPROJECTION = "content");
 /// of the argument proxy object, at which point this property is redundant. 
 Property ArgumentName As %String(XMLPROJECTION = "none");
 
-Method HandleExtraContent(ByRef pCommentBlock As %Library.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
+Method HandleExtraContent(ByRef pCommentBlock As %ZPM.Types.RawString, pContextObject As %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity) [ Private ]
 {
 	set tArgName = ##class(%ZPM.PackageManager.Developer.Annotation.Utils).PopWhitespacePiece(.pCommentBlock)
 	set ..ArgumentName = tArgName
@@ -33,7 +33,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>ArgumentDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

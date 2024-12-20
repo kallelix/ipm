@@ -31,7 +31,7 @@ Storage Default
 <IdLocation>^%ZPM.Dev.Annotation.WarningD</IdLocation>
 <IndexLocation>^%ZPM.Dev.Annotation.WarningI</IndexLocation>
 <StreamLocation>^%ZPM.Dev.Annotation.WarningS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

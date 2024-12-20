@@ -96,7 +96,7 @@ Method Display()
 /// For a full list of modifiers, see the Commands XDATA block in <class>%ZPM.PackageManager</class>.
 /// If specified, <var>pExpectedType</var> will be compared against the full classname of the existing
 /// instance matched by <var>pModifiers("name")</var>; an error will be returned if they do not match.
-ClassMethod Configure(pInteractive As %Boolean = 1, ByRef pModifiers, ByRef pData, pExpectedType As %Dictionary.Classname = "") As %Status [ Final ]
+ClassMethod Configure(pInteractive As %Boolean = 1, ByRef pModifiers, ByRef pData, pExpectedType As %String = "") As %Status [ Final ]
 {
 	Set tSC = $$$OK
 	Try {
@@ -245,7 +245,7 @@ Storage Default
 <IdLocation>^%ZPM.Client.ServerDefD</IdLocation>
 <IndexLocation>^%ZPM.Client.ServerDefI</IndexLocation>
 <StreamLocation>^%ZPM.Client.ServerDefS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

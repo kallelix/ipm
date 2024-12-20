@@ -27,7 +27,7 @@ $Case(..Package '= "", 1: ".PKG", : ".CLS")
 }
 
 /// Class extending %UnitTest.Manager to use to run unit tests
-Property ManagerClass As %Dictionary.Classname [ InitialExpression = "%ZPM.PackageManager.Developer.UnitTest.Manager" ];
+Property ManagerClass As %String [ InitialExpression = "%ZPM.PackageManager.Developer.UnitTest.Manager" ];
 
 /// Export format
 Property Format As %String(VALUELIST = ",UDL,XML");

@@ -30,7 +30,7 @@ Property APIs As list Of %ZPM.PackageManager.Developer.APIReference(STORAGEDEFAU
 
 /// Specifies a class that handles lifecycle events for this resource
 /// Typically only applicable to directory/file resources
-Property ProcessorClass As %Dictionary.Classname(XMLPROJECTION = "ATTRIBUTE");
+Property ProcessorClass As %String(XMLPROJECTION = "ATTRIBUTE");
 
 /// Transient instance of ProcessorClass
 Property Processor As %ZPM.PackageManager.Developer.Processor.Abstract(XMLPROJECTION = "NONE") [ Transient ];
@@ -565,7 +565,7 @@ Storage Default
 <IdLocation>^ZPM.Dev.ModuleC("Resources")</IdLocation>
 <IndexLocation>^ZPM.Dev.ResourceI</IndexLocation>
 <StreamLocation>^ZPM.Dev.ResourceS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

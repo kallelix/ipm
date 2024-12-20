@@ -7,7 +7,7 @@ Class %ZPM.PackageManager.Developer.Annotation.CosEntity.CommentableEntity Exten
 Property Name As %String(MAXLEN = 200, XMLPROJECTION = "attribute");
 
 /// stores the NON-TAG content of the "///" description of a class or class member
-Property CommentBlock As %Library.RawString;
+Property CommentBlock As %ZPM.Types.RawString;
 
 Property IsAPI As %Boolean(XMLPROJECTION = "none") [ InitialExpression = 0 ];
 
@@ -49,7 +49,7 @@ Method AssignTag(pNewTag As %ZPM.PackageManager.Developer.Annotation.Tag.AnchorT
 }
 
 /// go through the comment block on the current entity and parse tags from it
-Method ProcessComments(pDescription As %Library.RawString) As %Status
+Method ProcessComments(pDescription As %ZPM.Types.RawString) As %Status
 {
 	set tReturnValue = $$$OK
 	try {
@@ -272,7 +272,7 @@ Method ValidateTags()
 /// returns the name of the namespace where that class's module's annotation data has 
 /// been composed (if applicable), which may be the same as the current working namespace. 
 /// If the class is a non-module class, we return the empty string. 
-ClassMethod NamespaceForModuleClass(pClassName As %Dictionary.Classname, Output pObjectID As %Integer) As %String
+ClassMethod NamespaceForModuleClass(pClassName As %String, Output pObjectID As %Integer) As %String
 {
 	kill pObjectID
 	
@@ -363,7 +363,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>CommentableEntityDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

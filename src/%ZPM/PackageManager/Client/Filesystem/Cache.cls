@@ -153,7 +153,7 @@ Storage Default
 <IdLocation>^ZPM.Client.FSCacheD</IdLocation>
 <IndexLocation>^ZPM.Client.FSCacheI</IndexLocation>
 <StreamLocation>^ZPM.Client.FSCacheS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

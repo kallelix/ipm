@@ -17,7 +17,7 @@ Property ClassMethod As %Boolean(XMLPROJECTION = "attribute");
 Index MethodProxyExtentIndex [ Extent ];
 
 /// exclude implementation methods for custom queries (that is, queries of %Query type)
-ClassMethod SkipProxy(pParentClassName As %Dictionary.Classname, pMemberName As %String) As %Boolean
+ClassMethod SkipProxy(pParentClassName As %String, pMemberName As %String) As %Boolean
 {
 	if $$$comMemberKeyGet(pParentClassName, ..#DictionaryKey, pMemberName, $$$cMETHstubmember) '= "" {
 		quit 1
@@ -118,7 +118,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>MethodProxyDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

@@ -386,7 +386,7 @@ Storage Default
 <IdLocation>^%ZPM.Dev.Annotation.CosEntityD</IdLocation>
 <IndexLocation>^%ZPM.Dev.Annotation.CosEntityI</IndexLocation>
 <StreamLocation>^%ZPM.Dev.Annotation.CosEntityS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

@@ -62,7 +62,7 @@ Method CalculatedNonModuleSuperclassesGet() As %Collection.AbstractListOfObj [ C
 }
 
 /// given a class name, populate the class proxy with annotations etc. 
-ClassMethod BuildProxy(pModuleName As %String, pClassName As %Dictionary.Classname, pListOfModulesDependedOn As %Library.List, Output pNewProxy As %ZPM.PackageManager.Developer.Annotation.CosEntity.ClassProxy) As %Status
+ClassMethod BuildProxy(pModuleName As %String, pClassName As %String, pListOfModulesDependedOn As %Library.List, Output pNewProxy As %ZPM.PackageManager.Developer.Annotation.CosEntity.ClassProxy) As %Status
 {
 	set tReturnVal = $$$OK 
 	try {
@@ -404,7 +404,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>ClassProxyDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

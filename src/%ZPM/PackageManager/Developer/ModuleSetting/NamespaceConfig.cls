@@ -34,7 +34,7 @@ Storage Default
 </Value>
 </Data>
 <State>NamespaceConfigState</State>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }

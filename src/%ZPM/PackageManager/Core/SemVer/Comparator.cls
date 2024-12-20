@@ -149,7 +149,7 @@ Storage Default
 </Data>
 <State>ComparatorState</State>
 <StreamLocation>^ZPM.PackageManager.Core33CB.ComparatorS</StreamLocation>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }

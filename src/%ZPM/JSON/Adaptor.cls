@@ -1,4 +1,4 @@
-Class %ZPM.JSON.Adaptor Extends %JSON.Adaptor [ System = 3 ]
+Class %ZPM.JSON.Adaptor Extends %ZPM.Types.JSON.Adaptor [ System = 3 ]
 {
 
 /// %JSONGenerate is an internal method that controls the generation of the other methods in %JSON.Adaptor.

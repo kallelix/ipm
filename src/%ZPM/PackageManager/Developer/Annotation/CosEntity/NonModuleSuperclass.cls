@@ -7,7 +7,7 @@ Parameter XMLNAME = "NonModuleSuperclass";
 
 Relationship AppliesTo As %ZPM.PackageManager.Developer.Annotation.CosEntity.ClassProxy [ Cardinality = parent, Inverse = NonModuleSuperclasses ];
 
-Property ClassName As %Dictionary.Classname(XMLPROJECTION = "attribute");
+Property ClassName As %String(XMLPROJECTION = "attribute");
 
 Property InPrimaryAncestry As %Boolean(XMLPROJECTION = "attribute") [ InitialExpression = 0 ];
 
@@ -24,12 +24,12 @@ Storage Default
 <Value>InPrimaryAncestry</Value>
 </Value>
 </Data>
-<DataLocation>{%%PARENT}("NonModuleSuperclasses")</DataLocation>
+<DataLocation>{%%PARENT}("%ZPM.PackageManager.Developer.Annotation.CosEntity.ClassProxy.NonModuleSuperclasses")</DataLocation>
 <DefaultData>NonModuleSuperclassDefaultData</DefaultData>
-<IdLocation>^%ZPM.Dev.Annot.ClassProxyC("NonModuleSuperclasses")</IdLocation>
-<IndexLocation>^%ZPM.Dev.Annotation.NonModSupI</IndexLocation>
-<StreamLocation>^%ZPM.Dev.Annotation.NonModSupS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<IdLocation>^%ZPM.PackageMan1AC4.ClassProxyC("NonModuleSuperclasses")</IdLocation>
+<IndexLocation>^%ZPM.Packa1AC4.NonModuleSuA810I</IndexLocation>
+<StreamLocation>^%ZPM.Packa1AC4.NonModuleSuA810S</StreamLocation>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

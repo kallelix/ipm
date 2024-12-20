@@ -1682,7 +1682,7 @@ Method GetResourceRelativePath(pResource As %String, pExtension As %String) As %
 	Quit tDirectory_tFile
 }
 
-ClassMethod GetBaseClassForPackaging(pPackaging As %String, Output pBaseClass As %Dictionary.Classname) As %Status [ Final ]
+ClassMethod GetBaseClassForPackaging(pPackaging As %String, Output pBaseClass As %String) As %Status [ Final ]
 {
 	Set tSC = $$$OK
 	Set pBaseClass = ""

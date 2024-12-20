@@ -105,7 +105,7 @@ Storage Default
 <IdLocation>^%ZPM.PackageManager360D.ModuleC("Invokes")</IdLocation>
 <IndexLocation>^%ZPM.Packa360D.InvokeRefer378FI</IndexLocation>
 <StreamLocation>^%ZPM.Packa360D.InvokeRefer378FS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

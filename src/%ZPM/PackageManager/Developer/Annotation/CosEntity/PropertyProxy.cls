@@ -5,7 +5,7 @@ Parameter XMLNAME = "Property";
 
 Parameter AcceptableAnchorTags = "API.Overrideable,API.Property,DoesNotInheritTags";
 
-Property DataType As %Dictionary.Classname;
+Property DataType As %String;
 
 Parameter DictionaryKey = {$$$cCLASSproperty};
 
@@ -25,7 +25,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>PropertyProxyDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

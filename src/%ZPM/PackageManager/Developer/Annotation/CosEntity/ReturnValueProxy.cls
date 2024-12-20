@@ -5,7 +5,7 @@ Parameter XMLNAME = "ReturnValue";
 
 Parameter AcceptableAnchorTags = "ReturnValue";
 
-Property DataType As %Dictionary.Classname(XMLPROJECTION = "attribute");
+Property DataType As %String(XMLPROJECTION = "attribute");
 
 Relationship ParentMethod As %ZPM.PackageManager.Developer.Annotation.CosEntity.MethodProxy [ Cardinality = one, Inverse = ReturnValue, OnDelete = cascade ];
 
@@ -34,7 +34,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>ReturnValueProxyDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

@@ -40,7 +40,7 @@ Storage Default
 </Data>
 <State>ResolvedModuleReferenceState</State>
 <StreamLocation>^ZPM.PackageManager9CFF.ResolvedMod1E11S</StreamLocation>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }

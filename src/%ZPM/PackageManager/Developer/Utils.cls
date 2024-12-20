@@ -951,6 +951,29 @@ ClassMethod LoadNewModule(pDirectory As %String, ByRef pParams, pRepository As %
 		} ElseIf tUseTransactions {
 			Tstart
 		}
+		
+		do ##class(%File).CopyFile(pDirectory_"module.xml", pDirectory_"moduleo.xml")
+
+		set f = ##class(%FileCharacterStream).%New()		
+		set f.Filename = pDirectory_"moduleo.xml"
+		set ft = ##class(%FileCharacterStream).%New()		
+		set ft.Filename = pDirectory_"module.xml"
+		do ft.Clear()
+		while 'f.AtEnd
+		{
+			set line = f.ReadLine()
+			if line [ "<Export generator=""IRIS"""
+			{
+				set p = $Find(line,"generator=""IRIS""")
+				set $Extract(line,p-5, p-2) = "Cache"
+				set p = $Find(line,"version=""")
+				set $Extract(line,p, p+1) = "25"
+			}
+			do ft.WriteLine(line)
+		}
+		do ft.SaveStream()
+		set ft = ""
+		
 		Set tSC = $System.OBJ.Load(pDirectory_"module.xml",$Select(tVerbose:"d",1:"-d"),,.tLoadedList)
 		$$$ThrowOnError(tSC)
 		

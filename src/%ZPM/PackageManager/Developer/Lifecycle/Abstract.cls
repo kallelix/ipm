@@ -62,7 +62,7 @@ ClassMethod GetDefaultParameters(ByRef pParams, pPhases As %List)
 }
 
 /// Returns the default resource processor class to use for a given resource name.
-ClassMethod GetDefaultResourceProcessor(pResourceName As %String) As %Dictionary.Classname
+ClassMethod GetDefaultResourceProcessor(pResourceName As %String) As %String
 {
 	If ($Extract(pResourceName) = "/") {
 		If pResourceName [ "/internal/testing/" {
@@ -92,7 +92,7 @@ ClassMethod GetDefaultResourceProcessor(pResourceName As %String) As %Dictionary
 	Quit $$$DefaultProcessorPackageDot_"Default."_tShortName
 }
 
-ClassMethod GetDefaultResourceProcessorProc(pLifecycleClass As %Dictionary.Classname, pResourceName As %String) As %String [ SqlName = GET_DEFAULT_RESOURCE_PROCESSOR, SqlProc ]
+ClassMethod GetDefaultResourceProcessorProc(pLifecycleClass As %String, pResourceName As %String) As %String [ SqlName = GET_DEFAULT_RESOURCE_PROCESSOR, SqlProc ]
 {
 	// Fail gracefully (just say there is no default) if pLifecycleClass is empty/invalid.
 	Set tLifecycleClass = pLifecycleClass

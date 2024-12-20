@@ -142,5 +142,7 @@ ROUTINE %ZPM.PackageManager.Common [Type=INC]
 /// OS corresponding slash
 #define SLASH $Select($$$isWINDOWS: "\", 1: "/")
 
+#define ThrowSQLIfError(%sqlcode,%message) Throw:%sqlcode<0 ##class(%Exception.SQL).CreateFromSQLCODE(%sqlcode,%message)
+
 #; Variable to mark deprecation warning has been shown in the current process
 #define DeprecationWarned %ZPMModuleDeprecatedResource

@@ -78,23 +78,24 @@ Storage Default
 <Data name="QueryProxyDefaultData">
 <Subscript>"QueryProxy"</Subscript>
 <Value name="1">
-<Value>RowSpec</Value>
+<Value>QueryType</Value>
 </Value>
 <Value name="2">
-<Value>ContainID</Value>
+<Value>RowSpec</Value>
 </Value>
 <Value name="3">
-<Value>SqlName</Value>
+<Value>ContainID</Value>
 </Value>
 <Value name="4">
-<Value>SqlProc</Value>
+<Value>SqlName</Value>
 </Value>
 <Value name="5">
-<Value>QueryType</Value>
+<Value>SqlProc</Value>
 </Value>
 </Data>
 <DefaultData>QueryProxyDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }
+

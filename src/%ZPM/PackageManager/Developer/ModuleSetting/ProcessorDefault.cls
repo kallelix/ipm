@@ -2,7 +2,7 @@ Class %ZPM.PackageManager.Developer.ModuleSetting.ProcessorDefault Extends %ZPM.
 {
 
 /// Resource processor class to which this default setting applies
-Property Class As %Dictionary.Classname(XMLPROJECTION = "ATTRIBUTE") [ Required ];
+Property Class As %String(XMLPROJECTION = "ATTRIBUTE") [ Required ];
 
 /// Default attributes to apply to the resources with the specified ProcessorClass
 Property Attributes As array Of %String(MAXLEN = "", XMLKEYNAME = "Name", XMLNAME = "Attribute", XMLPROJECTION = "ELEMENT");
@@ -25,7 +25,7 @@ Storage Default
 </Value>
 </Data>
 <State>ProcessorDefaultState</State>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }

@@ -192,6 +192,9 @@ Storage Default
 {
 <Data name="RemoteServerDefinitionDefaultData">
 <Subscript>"RemoteServerDefinition"</Subscript>
+<Value name="1">
+<Value>URL</Value>
+</Value>
 <Value name="2">
 <Value>Username</Value>
 </Value>
@@ -199,17 +202,14 @@ Storage Default
 <Value>Password</Value>
 </Value>
 <Value name="4">
-<Value>URL</Value>
-</Value>
-<Value name="5">
 <Value>Token</Value>
 </Value>
-<Value name="6">
+<Value name="5">
 <Value>DeploymentEnabled</Value>
 </Value>
 </Data>
 <DefaultData>RemoteServerDefinitionDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

@@ -407,6 +407,27 @@ Method OnLoad(pFullResourcePath As %String, pVerbose As %Boolean, pCompile As %B
       $$$ThrowOnError(tSC)
       If $Data(pLoadedList)>1 {
         Merge tResult = pLoadedList
+        
+        set g = ""
+        set g = $Order(pLoadedList(g))
+        while g '= ""
+        {
+	        set st = ##class(%Dictionary.StorageDefinition).%OpenId($Piece(g,".",1,*-1)_"||Default")
+	        if $IsObject(st)
+	        {
+		        if st.Type = "%Storage.Persistent"
+		        {
+			        set st.Type = "%Library.CacheStorage"
+			        do st.%Save(0)
+		        }
+		        elseif st.Type = "%Storage.Serial"
+		        {
+			        set st.Type = "%Library.CacheSerialState"
+			        do st.%Save(0)
+		        }
+	        }
+	        set g = $Order(pLoadedList(g))
+        }
         Set pLoadedList = ""
       }
     } ElseIf (..Format = "%RO") {

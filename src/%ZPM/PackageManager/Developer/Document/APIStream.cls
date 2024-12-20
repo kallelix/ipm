@@ -25,7 +25,7 @@ Storage Default
 <IdLocation>^%ZPM.Dev.APIDocD</IdLocation>
 <IndexLocation>^%ZPM.Dev.APIDocI</IndexLocation>
 <StreamLocation>^%ZPM.Dev.APIDocS</StreamLocation>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

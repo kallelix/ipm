@@ -7,7 +7,7 @@ Parameter AcceptableAnchorTags = "Argument";
 
 Property Name As %String(XMLPROJECTION = "attribute");
 
-Property DataType As %Dictionary.Classname(XMLPROJECTION = "attribute");
+Property DataType As %String(XMLPROJECTION = "attribute");
 
 Property DefaultValue As %String(XMLPROJECTION = "attribute");
 
@@ -52,7 +52,7 @@ Storage Default
 </Value>
 </Data>
 <DefaultData>ArgumentProxyDefaultData</DefaultData>
-<Type>%Storage.Persistent</Type>
+<Type>%Library.CacheStorage</Type>
 }
 
 }

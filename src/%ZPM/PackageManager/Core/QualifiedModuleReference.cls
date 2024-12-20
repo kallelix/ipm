@@ -33,31 +33,32 @@ Storage Default
 <Value>VersionString</Value>
 </Value>
 <Value name="4">
-<Value>ServerName</Value>
+<Value>Description</Value>
 </Value>
 <Value name="5">
 <Value>Repository</Value>
 </Value>
 <Value name="6">
-<Value>Description</Value>
-</Value>
-<Value name="7">
 <Value>AllVersions</Value>
 </Value>
-<Value name="8">
+<Value name="7">
 <Value>Origin</Value>
 </Value>
-<Value name="9">
+<Value name="8">
 <Value>Deployed</Value>
 </Value>
-<Value name="10">
+<Value name="9">
 <Value>PlatformVersion</Value>
 </Value>
-<Value name="11">
+<Value name="10">
 <Value>PlatformVersions</Value>
 </Value>
+<Value name="11">
+<Value>ServerName</Value>
+</Value>
 </Data>
-<Type>%Storage.Serial</Type>
+<Type>%Library.CacheSerialState</Type>
 }
 
 }
+

@@ -127,7 +127,7 @@ Method %CompareTo(pObj As %ZPM.PackageManager.Core.ComparisonAdaptor, pIgnorePro
 }
 
 /// Helper method to generate comparison between two ObjectScript
-ClassMethod GenerateCompareForSingleItem(pCode As %Stream.MethodGenerator, pClassname As %Dictionary.Classname, pPropertyName As %Dictionary.CacheIdentifier, pMethodName As %Dictionary.Identifier, pItem1 As %String, pItem2 As %String, pIndexVariable As %String = "", pIndent As %Integer = 1) [ Internal ]
+ClassMethod GenerateCompareForSingleItem(pCode As %Stream.MethodGenerator, pClassname As %String, pPropertyName As %Dictionary.CacheIdentifier, pMethodName As %ZPM.Types.Identifier, pItem1 As %String, pItem2 As %String, pIndexVariable As %String = "", pIndent As %Integer = 1) [ Internal ]
 {
 	Set indexAppend = $Case((pIndexVariable = ""), 1:"", :", "_pIndexVariable)
 	Set indent = ""
@@ -161,7 +161,7 @@ ClassMethod GenerateCompareForSingleItem(pCode As %Stream.MethodGenerator, pClas
 }
 
 /// Returns a list of all super classes for a given class <var>pClassname</var>
-ClassMethod FindAllSuperClasses(pClassname As %Dictionary.Classname) As %Library.List
+ClassMethod FindAllSuperClasses(pClassname As %String) As %Library.List
 {
 	#dim superClassArray As %String
 	#dim classesIteratedArray As %String
